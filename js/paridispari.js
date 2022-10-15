@@ -20,10 +20,13 @@ let sum = 0;
 function getInfo() {
 
     userInput = parseInt(inputNumber.value);
-    if (userInput > 5) {
-        alert('numeri da 1 a 5');
-        inputNumber.value = '';
-        userInput = '';
+    if (userInput > 5 || inputNumber.value == '') {
+        alert('Inserire un numero da 1 a 5');
+        reset();
+        return
+    } else if (pari.checked == false && dispari.checked == false) {
+        alert('Scegliere Pari o Dispari')
+        reset();
         return
     }
 
@@ -76,6 +79,7 @@ function reset() {
     inputNumber.value = '';
     dispari.checked = false;
     pari.checked = false;
+    userInput = '';
 
 }
 
