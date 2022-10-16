@@ -2,7 +2,6 @@
 const pari = document.querySelector('#pari');
 const dispari = document.querySelector('#dispari');
 
-const all = [pari, dispari];
 
 const inputNumber = document.querySelector('#number');
 const btn = document.querySelector('button');
