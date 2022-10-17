@@ -7,6 +7,13 @@ const output = document.querySelector('h1');
 
 function inputCheck() {
 
+    if (userInput.value == '') {
+
+        alert('Inserire una parola');
+        return;
+
+    }
+
     let currentInput = userInput.value.toLowerCase();
 
     let reversedInput = currentInput.split('').reverse().join('');
@@ -19,7 +26,7 @@ function inputCheck() {
         output.innerText = 'Parola non palindroma';
     }
 
-    console.log(currentInput, reversedInput);
+    //console.log(currentInput, reversedInput);
 
 }
 
